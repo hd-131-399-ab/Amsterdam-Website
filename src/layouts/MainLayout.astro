@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import Navbar from "../components/Navbar.astro";
+import Logo from "../assets/astro.svg";
+import "../assets/styles/global.css"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Amsterdam 2026</title>
+	</head>
+
+	<body>
+		<div class="main-container">
+			<div class="nav-container">
+				<Image class="logo" src={Logo} alt="logo"/>
+
+				<Navbar />
+			</div>
+	
+			<div class="slot-container">
+				<slot />
+			</div>
+
+			<div class="footer"></div>
+		</div>
+	</body>
+</html>
+
+<style>
+	html, body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--background);
+	}
+
+	.main-container {
+		display: grid;
+		grid-template-rows: .5fr 10fr 1.5fr;
+	}
+
+	.nav-container {
+		grid-row: 1;
+		align-items: center;
+		
+		position: sticky;
+		top: 0;
+
+		display: grid;
+		grid-template-columns: 1fr 4fr;
+		padding-left: 1.5%;
+
+		background-color: var(--background);
+	}
+
+	.logo {
+		grid-column: 1;
+	}
+
+	.slot-container {
+		grid-row: 2;
+
+		background: #e9e9e9 url("../assets/grid.svg") center / cover no-repeat fixed;
+	}
+
+	.footer {
+		grid-row: 3;
+		background-color: red;
+	}
+</style>

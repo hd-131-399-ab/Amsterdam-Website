@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import FoodRanking from "../components/md/food-ranking.md"
+---
+
+<MainLayout>
+  <main>
+    <article class="prose">
+      <FoodRanking />
+    </article>
+  </main>
+</MainLayout>
+
+<style>
+  main {
+    margin: 8% 8% 10% 8%;
+  }
+
+  .prose {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #090;
+  }
+  .prose :global(h1),
+  .prose :global(h2),
+  .prose :global(h3) {
+    font-family: 'Merriweather', Georgia, serif;
+    color: black;
+  }
+  .prose :global(a)    { color: #e63946; }
+  .prose :global(code) { font-family: 'Fira Code', monospace; color: #c2410c; }
+
+</style>

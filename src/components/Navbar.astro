@@ -1,0 +1,53 @@
+
+<header>
+
+  <nav class="nav-container">
+    <div class="nav-button-border">
+      <a href="/collections" class="nav-button">Collections</a>
+    </div>
+    <div class="nav-button-border">
+      <a href="/pictures" class="nav-button">Fotos</a>
+    </div>
+    <div class="nav-button-border">
+      <a href="/videos" class="nav-button">Videos</a>
+    </div>
+    <div class="nav-button-border">
+      <a href="/quotes" class="nav-button">Zitate</a>
+    </div>
+  </nav>
+  
+</header>
+
+<style>
+  .nav-container {
+    margin-right: 2%;
+
+    justify-content: end;
+    gap: .8%;
+
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  @media (max-width: 780px) {
+		.nav-container {
+			justify-content: start;
+		}
+	}
+
+  .nav-button-border {
+    padding: .5em;
+
+    border-style: solid;
+    border-color: rgb(46, 69, 46);
+    border-width: 3px;
+    border-radius: 6px;
+
+    background-color: var(--red-eye-gradient);
+  }
+
+  .nav-button {
+    text-decoration: none;
+    color: rgb(3, 71, 13);
+  }
+</style>
