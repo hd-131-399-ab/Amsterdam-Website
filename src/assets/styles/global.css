@@ -51,6 +51,12 @@
 	box-sizing: border-box;
 }
 
+html {
+	/* Stop iOS from inflating text in landscape */
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
 body {
 	font-family: var(--font-body);
 	font-size: 1.25rem;
