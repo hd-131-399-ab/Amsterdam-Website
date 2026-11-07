@@ -5,6 +5,7 @@
 ## \#3 Reis im Hotel
 ## \#2 Die HardRock Cafe Burger
 ## \#1 Bastis Pizza
+![Bingo](../../assets/Amsterdam_Bingo_2026_ausgefuelt.webp)
 ## \#1 Bastis Pizza
 ## \#1 Bastis Pizza
 ## \#1 Bastis Pizza
