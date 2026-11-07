@@ -16,12 +16,12 @@ Static Astro 7 site (no UI framework integrations, no extra deps) documenting a 
 
 ## Architecture
 
-- `src/layouts/MainLayout.astro` is the single page shell: full `<html>` document, fixed background image (`src/assets/grid.png` via `astro:assets` `<Image>`), and a CSS grid of 6% navbar row / 94% content row. Every page wraps its content in `<MainLayout>`; content scrolls inside its own container (e.g. `overflow-y: scroll` in `collections.astro`), not the body.
+- `src/layouts/MainLayout.astro` is the single page shell: full `<html>` document, `src/assets/grid.svg` as fixed body background (treat it as final, don't edit it), and a CSS grid of sticky navbar / content / footer. Every page wraps its content in `<MainLayout>`.
+- Design: weed theme, handwritten fonts (Caveat Brush for headings, Patrick Hand for body) loaded via Astro's Fonts API in `astro.config.mjs`. Every color is a CSS variable in `src/assets/styles/global.css`; never hardcode colors elsewhere. The `.paper` class there is the shared hand-drawn card for content over the background.
 - `src/components/Navbar.astro` links to `/collections`, `/pictures`, `/videos`, `/quotes`. Only `/collections` exists so far; `/rankings` exists but isn't linked.
 - Markdown content lives in `src/components/md/` and is imported directly as a component (`import FoodRanking from "../components/md/food-ranking.md"`), then styled from the importing page via `.prose :global(...)` selectors. No content collections are used.
 - `ImageRanking.astro`, `LandingPage.astro`, `DetailedImageDisplay.astro` are empty scaffolds still to be built.
 - `404.astro` and `500.astro` are custom error pages; `500.astro` receives `error` as a prop.
-- `src/components/Welcome.astro` is leftover starter code and references deleted assets (`astro.svg`, `background.svg`); don't import it.
 
 ## `example_prj/`
 

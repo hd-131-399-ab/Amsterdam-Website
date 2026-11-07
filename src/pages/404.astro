@@ -3,5 +3,23 @@ import MainLayout from "../layouts/MainLayout.astro"
 ---
 
 <MainLayout>
-  <p>404</p>
+  <section class="paper error">
+    <h1>404</h1>
+    <p>Diese Seite hat sich in Rauch aufgelöst.</p>
+    <a href="/">Zurück zum Start</a>
+  </section>
 </MainLayout>
+
+<style>
+  .error {
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 5rem;
+    color: var(--red-eye);
+  }
+</style>

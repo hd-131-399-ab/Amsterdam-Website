@@ -1,0 +1,98 @@
+/* Design tokens: every color on the site is defined here and only used via var(). */
+:root {
+	/* Leaf greens, picked from the buds in grid.svg */
+	--leaf-950: #18230f;
+	--leaf-800: #2c3f1d;
+	--leaf-600: #4f6b2c;
+	--leaf-400: #7f9c4a;
+	--leaf-200: #c3d3a0;
+
+	/* Orange pistils on the buds */
+	--pistil: #c7782c;
+
+	/* Rolling paper */
+	--paper: #f7f4ea;
+	--paper-glass: rgba(191, 148, 143, 0.275);
+	--paper-edge: #d6d1c1;
+
+	/* Red-eye accents */
+	--red-eye: #b8323b;
+	--red-eye-vein: #e07a78;
+	--red-eye-white: #fbeeec;
+
+	--shadow: rgb(24 35 15 / 0.28);
+
+	/* Semantic roles */
+	--background: var(--paper);
+	--text: var(--leaf-950);
+	--text-muted: var(--leaf-600);
+	--heading: var(--leaf-800);
+	--accent: var(--red-eye);
+	--surface: var(--paper-glass);
+	--surface-border: var(--paper-edge);
+	--bar-text: var(--paper);
+	--bar-edge: color-mix(in srgb, var(--leaf-600) 70%, transparent);
+
+	/* Translucent smoke haze for header/footer; the layout animates its position */
+	--bar-background:
+		radial-gradient(ellipse 30% 160% at 20% 0%, color-mix(in srgb, var(--leaf-200) 30%, transparent), transparent 70%),
+		radial-gradient(ellipse 25% 140% at 70% 100%, color-mix(in srgb, var(--pistil) 22%, transparent), transparent 70%),
+		linear-gradient(
+			100deg,
+			color-mix(in srgb, var(--leaf-950) 80%, transparent),
+			color-mix(in srgb, var(--leaf-800) 60%, transparent) 35%,
+			color-mix(in srgb, var(--leaf-600) 50%, transparent) 65%,
+			color-mix(in srgb, var(--leaf-950) 80%, transparent)
+		);
+
+	--red-eye-gradient: radial-gradient(
+		circle at 50% 50%,
+		var(--red-eye-white) 0 35%,
+		var(--red-eye-vein) 80%,
+		var(--red-eye) 100%
+	);
+
+	--font-body: var(--font-hand), cursive;
+	--font-display: var(--font-hand-display), cursive;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-body);
+	font-size: 1.25rem;
+	line-height: 1.5;
+	color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-display);
+	font-weight: 400;
+	color: var(--heading);
+	line-height: 1.15;
+}
+
+a {
+	color: var(--accent);
+}
+
+::selection {
+	background: var(--red-eye-vein);
+	color: var(--red-eye-white);
+}
+
+/* Hand-drawn paper card that sits on top of the background */
+.paper {
+	padding: clamp(1.25rem, 4vw, 3rem);
+	background: var(--surface);
+	backdrop-filter: blur(6px);
+	border: 3px solid var(--surface-border);
+	border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+	box-shadow: 0 10px 30px var(--shadow);
+}
