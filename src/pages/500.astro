@@ -9,7 +9,7 @@ const { error } = Astro.props;
 ---
 
 <MainLayout>
-  <section class="paper error">
+  <section class="paper glass error">
     <h1>500</h1>
     <p>{error instanceof Error ? error.message : "Unknown error"}</p>
   </section>

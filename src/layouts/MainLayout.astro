@@ -18,8 +18,16 @@ import "../assets/styles/global.css";
 	</head>
 
 	<body>
+		<!-- Refraction for .glass: low-frequency noise bends the backdrop slightly -->
+		<svg class="defs" aria-hidden="true">
+			<filter id="glass-distortion" x="0" y="0" width="100%" height="100%">
+				<feTurbulence type="fractalNoise" baseFrequency="0.006 0.014" numOctaves="2" seed="7" result="noise" />
+				<feDisplacementMap in="SourceGraphic" in2="noise" scale="14" xChannelSelector="R" yChannelSelector="G" />
+			</filter>
+		</svg>
+
 		<div class="main-container">
-			<header class="nav-container">
+			<header class="nav-container glass">
 				<a class="wordmark" href="/">Amsterdam <span>'26</span></a>
 
 				<Navbar />
@@ -29,7 +37,7 @@ import "../assets/styles/global.css";
 				<slot />
 			</main>
 
-			<footer class="footer">
+			<footer class="footer glass">
 				<p>Amsterdam 2026 &middot; alles verschwommen, nichts bereut</p>
 			</footer>
 		</div>
@@ -45,6 +53,12 @@ import "../assets/styles/global.css";
 
 	body {
 		background: var(--background) url("../assets/grid.svg") center / cover no-repeat fixed;
+	}
+
+	.defs {
+		position: absolute;
+		width: 0;
+		height: 0;
 	}
 
 	.main-container {
@@ -65,39 +79,18 @@ import "../assets/styles/global.css";
 		gap: .5rem 1.5rem;
 		padding: .6rem clamp(1rem, 3vw, 2.5rem);
 
-		border-bottom: 3px solid var(--bar-edge);
-		box-shadow: 0 4px 16px var(--shadow);
-	}
-
-	.nav-container,
-	.footer {
-		background: var(--bar-background);
-		background-size: 250% 100%;
-		backdrop-filter: blur(8px) saturate(1.3);
-		animation: smoke-drift 40s ease-in-out infinite alternate;
-	}
-
-	@keyframes smoke-drift {
-		from { background-position: 0% 50%; }
-		to   { background-position: 100% 50%; }
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.nav-container,
-		.footer {
-			animation: none;
-		}
+		border-width: 0 0 1px;
 	}
 
 	.wordmark {
 		font-family: var(--font-display);
 		font-size: 2rem;
-		color: var(--bar-text);
+		color: var(--heading);
 		text-decoration: none;
 	}
 
 	.wordmark span {
-		color: var(--red-eye-vein);
+		color: var(--red-eye);
 	}
 
 	.slot-container {
@@ -107,8 +100,9 @@ import "../assets/styles/global.css";
 	.footer {
 		padding: .5rem 1rem;
 		text-align: center;
-		color: var(--leaf-200);
-		border-top: 3px solid var(--bar-edge);
+		color: var(--text-muted);
+		border-width: 1px 0 0;
+		box-shadow: inset 0 1px 0 var(--glass-highlight);
 	}
 
 	.footer p {

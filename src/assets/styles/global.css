@@ -1,26 +1,33 @@
 /* Design tokens: every color on the site is defined here and only used via var(). */
 :root {
-	/* Leaf greens, picked from the buds in grid.svg */
-	--leaf-950: #18230f;
-	--leaf-800: #2c3f1d;
-	--leaf-600: #4f6b2c;
-	--leaf-400: #7f9c4a;
-	--leaf-200: #c3d3a0;
+	/* Muted leaf greens, sampled from the buds in grid.svg */
+	--leaf-950: #1e2618;
+	--leaf-800: #36432a;
+	--leaf-600: #5b6b45;
+	--leaf-400: #8d9a72;
+	--leaf-200: #cdd3bd;
 
-	/* Orange pistils on the buds */
-	--pistil: #c7782c;
+	/* Dried pistil */
+	--pistil: #a8703f;
 
 	/* Rolling paper */
-	--paper: #f7f4ea;
+	--paper: #f2f0ea;
 	--paper-glass: rgba(191, 148, 143, 0.275);
 	--paper-edge: #d6d1c1;
 
-	/* Red-eye accents */
-	--red-eye: #b8323b;
-	--red-eye-vein: #e07a78;
-	--red-eye-white: #fbeeec;
+	/* Red-eye accents, kept dusty instead of neon */
+	--red-eye: #a24a46;
+	--red-eye-vein: #cf9590;
+	--red-eye-white: #f6ecea;
 
-	--shadow: rgb(24 35 15 / 0.28);
+	--shadow: rgb(30 38 24 / 0.18);
+
+	/* Glass: a faint tint, bright top edge, darker bottom edge */
+	--glass-tint: color-mix(in srgb, var(--paper) 22%, transparent);
+	--glass-tint-strong: color-mix(in srgb, var(--paper) 42%, transparent);
+	--glass-edge: color-mix(in srgb, var(--paper) 45%, transparent);
+	--glass-highlight: color-mix(in srgb, var(--paper) 70%, transparent);
+	--glass-shade: color-mix(in srgb, var(--leaf-950) 12%, transparent);
 
 	/* Semantic roles */
 	--background: var(--paper);
@@ -29,28 +36,6 @@
 	--heading: var(--leaf-800);
 	--accent: var(--red-eye);
 	--surface: var(--paper-glass);
-	--surface-border: var(--paper-edge);
-	--bar-text: var(--paper);
-	--bar-edge: color-mix(in srgb, var(--leaf-600) 70%, transparent);
-
-	/* Translucent smoke haze for header/footer; the layout animates its position */
-	--bar-background:
-		radial-gradient(ellipse 30% 160% at 20% 0%, color-mix(in srgb, var(--leaf-200) 30%, transparent), transparent 70%),
-		radial-gradient(ellipse 25% 140% at 70% 100%, color-mix(in srgb, var(--pistil) 22%, transparent), transparent 70%),
-		linear-gradient(
-			100deg,
-			color-mix(in srgb, var(--leaf-950) 80%, transparent),
-			color-mix(in srgb, var(--leaf-800) 60%, transparent) 35%,
-			color-mix(in srgb, var(--leaf-600) 50%, transparent) 65%,
-			color-mix(in srgb, var(--leaf-950) 80%, transparent)
-		);
-
-	--red-eye-gradient: radial-gradient(
-		circle at 50% 50%,
-		var(--red-eye-white) 0 35%,
-		var(--red-eye-vein) 80%,
-		var(--red-eye) 100%
-	);
 
 	--font-body: var(--font-hand), cursive;
 	--font-display: var(--font-hand-display), cursive;
@@ -84,15 +69,25 @@ a {
 
 ::selection {
 	background: var(--red-eye-vein);
-	color: var(--red-eye-white);
+	color: var(--leaf-950);
 }
 
-/* Hand-drawn paper card that sits on top of the background */
+/* Glass material. The second backdrop-filter adds the #glass-distortion
+   refraction from MainLayout; browsers that can't use url() there keep the first. */
+.glass {
+	background: var(--glass-tint);
+	backdrop-filter: blur(10px) saturate(0.95);
+	backdrop-filter: url(#glass-distortion) blur(8px) saturate(0.95);
+	border: 1px solid var(--glass-edge);
+	box-shadow:
+		inset 0 1px 0 var(--glass-highlight),
+		inset 0 -1px 0 var(--glass-shade),
+		0 12px 32px var(--shadow);
+}
+
+/* Content card; combine with .glass */
 .paper {
 	padding: clamp(1.25rem, 4vw, 3rem);
 	background: var(--surface);
-	backdrop-filter: blur(6px);
-	border: 3px solid var(--surface-border);
-	border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
-	box-shadow: 0 10px 30px var(--shadow);
+	border-radius: 22px;
 }
