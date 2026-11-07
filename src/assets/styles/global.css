@@ -7,6 +7,9 @@
 	--leaf-400: #8d9a72;
 	--leaf-200: #cdd3bd;
 
+	/*Link blue*/
+	--blue-link: #4e48c0;
+
 	/* Dried pistil */
 	--pistil: #a8703f;
 
@@ -35,6 +38,7 @@
 	--text-muted: var(--leaf-600);
 	--heading: var(--leaf-800);
 	--accent: var(--red-eye);
+	--link: var(--blue);
 	--surface: var(--paper-glass);
 
 	--font-body: var(--font-hand), cursive;

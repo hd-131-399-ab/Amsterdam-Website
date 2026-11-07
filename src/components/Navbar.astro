@@ -1,8 +1,8 @@
 ---
 const links = [
-  { href: "/collections", label: "Collections" },
-  { href: "/pictures", label: "Fotos" },
-  { href: "/videos", label: "Videos" },
+  { href: "/collections-overview/", label: "Collections" },
+  // { href: "/pictures", label: "Fotos" },
+  // { href: "/videos", label: "Videos" },
   { href: "/quotes", label: "Zitate" },
 ];
 
@@ -10,13 +10,7 @@ const current = Astro.url.pathname.replace(/\/$/, "");
 ---
 
 <nav>
-  <button
-    type="button"
-    class="burger"
-    aria-label="Menü"
-    aria-expanded="false"
-    aria-controls="nav-list"
-  >
+  <button type="button" class="burger" aria-label="Menü" aria-expanded="false" aria-controls="nav-list">
     <span></span><span></span><span></span>
   </button>
 
