@@ -3,6 +3,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://hd-131-399-ab.github.io',
+	base: '/Amsterdam-Website',
 	fonts: [
 		{
 			provider: fontProviders.google(),

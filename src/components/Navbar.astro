@@ -1,9 +1,10 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const links = [
-  { href: "/collections-overview/", label: "Collections" },
+  { href: `${base}/collections-overview/`, label: "Collections" },
   // { href: "/pictures", label: "Fotos" },
   // { href: "/videos", label: "Videos" },
-  { href: "/quotes", label: "Zitate" },
+  { href: `${base}/quotes`, label: "Zitate" },
 ];
 
 const current = Astro.url.pathname.replace(/\/$/, "");

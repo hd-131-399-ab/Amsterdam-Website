@@ -6,7 +6,7 @@ import MainLayout from "../layouts/MainLayout.astro"
   <section class="paper glass error">
     <h1>404</h1>
     <p>Diese Seite hat sich in Rauch aufgelöst.</p>
-    <a href="/">Zurück zum Start</a>
+    <a href={import.meta.env.BASE_URL}>Zurück zum Start</a>
   </section>
 </MainLayout>
 
