@@ -34,9 +34,7 @@ Bei dem Belag handelt es sich um BIO-Zertifizierte Erzeugnisse von lokalen Salam
 - "Top drei der totesten Dinge die wir, sobald wir zurück sind, wegwerfen." ~Vater
 - "In Deutschland gibt es zwei Arten von Pizzen: Pizzaofen und Steinofen. In Amsterdam gibt es zwei Arten von Pizzen: Tiefkühl und Fritöse." ~Onkel"
 
-**Vorsicht:** die Einnahme aller unten gelisteten Wirkstoffe ist nach dem Deutschen Beteubungsmittelgesetz untersagt und wird geahndet.<br></br>
-<i>*Keiner der Hersteller haftet für den Missbrauch dieser Produkte.</i>
 <br></br>
 ## Hinweise für Verbraucher
-**Vorsicht:** die Einnahme aller unten gelisteten Wirkstoffe ist nach dem Deutschen Beteubungsmittelgesetz untersagt und wird geahndet.<br></br>
+**Vorsicht:** die Einnahme aller oben gelisteten Wirkstoffe ist nach dem Deutschen Beteubungsmittelgesetz untersagt und wird geahndet.<br></br>
 <i>*Keiner der Hersteller haftet für den Missbrauch dieser Produkte.</i>
