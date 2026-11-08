@@ -20,7 +20,6 @@ Static Astro 7 site (no UI framework integrations, no extra deps) documenting a 
 - Design: weed theme, handwritten fonts (Caveat Brush for headings, Patrick Hand for body) loaded via Astro's Fonts API in `astro.config.mjs`. Every color is a CSS variable in `src/assets/styles/global.css`; never hardcode colors elsewhere. `.glass` there is the shared glass material (blur plus an SVG refraction filter defined in `MainLayout`), and `.paper` is the content card used together with it.
 - `src/components/Navbar.astro` links to `/collections`, `/pictures`, `/videos`, `/quotes`. Only `/collections` exists so far; `/rankings` exists but isn't linked.
 - Markdown content lives in `src/components/md/` and is imported directly as a component (`import FoodRanking from "../components/md/food-ranking.md"`), then styled from the importing page via `.prose :global(...)` selectors. No content collections are used.
-- `ImageRanking.astro`, `LandingPage.astro`, `DetailedImageDisplay.astro` are empty scaffolds still to be built.
 - `404.astro` and `500.astro` are custom error pages; `500.astro` receives `error` as a prop.
 
 ## `example_prj/`
