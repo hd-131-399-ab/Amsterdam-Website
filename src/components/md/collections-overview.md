@@ -1,7 +1,7 @@
 # Die tuffsten Foto-collections aus Amsterdam 2026
 
 ## Amsterdam totes Essen (ranking)
-Die Niederländische Küche ist durch ihren Einsatz von chemischen Zusatzstoffen eine der Vielfältigsten der Welt. Noch mehr Vielfalt schenkt allein der große **JAHU** seinen geliebten Bürgern:
+Die Niederländische Küche ist durch ihren Einsatz von chemischen Zusatzstoffen eine der Vielfältigsten der Welt.
 
 - Link-> [Top 3: totes Essen](../collections/food-ranking/)
 <br></br>
