@@ -1,1 +1,12 @@
 /example_prj
+/src/components/md/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# environment variables
+.env
+.env.production

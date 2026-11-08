@@ -9,7 +9,7 @@ Die Niederländische Küche ist durch ihren Einsatz von chemischen Zusatzstoffen
 ## Top 3 Sehenswürdigkeiten
 Ein Tourguide aus Amsterdam sagte: "Amsterdam ist die schönste Stadt der Welt".<br/>
 Die selbe Frau hat einen fraglichen Second-Hand-Shop empfohlen, der *vermutlich* vor zwei Jahren aufgrund von Verdacht auf Menschenhandel geschlossen wurde.<br></br>
-Quellen für meinen Verdacht gibt es nicht, verbindet man aber <u>nüchtern*</u> die Punkte, so liegt es auf der Hand. ...So wie die abgetrente zweite Hand eines unschuldigen, aus dem nahen Osten stammenden, Kindes.
+Quellen oder Beweise für diesen Verdacht gibt es nicht, verbindet man aber nüchtern* die Punkte, so liegt es auf der Hand. ...So wie die abgetrente zweite Hand eines unschuldigen, aus dem nahen Osten stammenden, Kindes.
 
 <u>*nüchtern</u> bedeutet im Amsterdamer Straßen-Slang: "Alltäglich unter dem Einfluss von mehr als 6,7 mg THC stehend".<br/> Bei geringeren Mengen spricht man einem Menschen im Allgemeinen das eigenständige Denken ab. 
 
